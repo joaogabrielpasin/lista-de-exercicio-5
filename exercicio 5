@@ -1,0 +1,22 @@
+palavra1 = input('digite a primeira palavra:')
+
+palavra2 = input('digite a segunda palavra:')
+
+palainvert1 = palavra1[::-1]
+
+palainvert2 = palavra2[::-1]
+
+if palavra1 == palainvert2 and palavra2 == palainvert1:
+   
+    print (palavra1)
+
+    print (palainvert1)
+
+    print (palavra2)
+
+    print (palainvert2)
+
+    print('sao palindromas')
+
+else:
+    print ('nao sao palindromas')
