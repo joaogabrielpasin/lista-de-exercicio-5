@@ -1,0 +1,5 @@
+frase = str(input('digite uma frase: ')).split()
+
+frase2 ='#'.join(frase)
+
+print(frase2)
