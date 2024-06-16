@@ -1,0 +1,3 @@
+frase = str(input('digite uma frase: ')).split()
+
+print ('nessa frase tem',len(frase),'palavras')
