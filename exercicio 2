@@ -1,0 +1,24 @@
+cadeia = input('digite sua cadeia:')
+
+cadeia2 = cadeia.upper()
+
+ 
+if 'A' in cadeia2 :
+
+    cadeia3 = cadeia2.replace('A','T')
+
+if 'T' in cadeia2:
+
+    cadeia3 = cadeia2.replace('T','A')
+
+elif 'G' in cadeia2 :
+
+    cadeia3 = cadeia2.replace('G','C')
+
+elif 'C' in cadeia2 :
+
+    cadeia3 = cadeia2.replace('C','G')
+
+print(cadeia2)
+
+print(cadeia3.upper())
