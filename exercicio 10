@@ -1,0 +1,23 @@
+def obter_nome_mes(numero_mes):
+    meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+             "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+    return meses[numero_mes - 1]
+
+def imprimir_data_extenso(data):
+    # Dividir a data em dia, mês e ano
+    partes = data.split('/')
+    dia = partes[0]
+    mes = int(partes[1])
+    ano = partes[2]
+
+    # Obter o nome do mês
+    nome_mes = obter_nome_mes(mes)
+
+    # Imprimir a data no formato desejado
+    print(f"{dia} de {nome_mes} de {ano}")
+
+# Solicitar a data de nascimento do usuário
+data_nascimento = input("Digite sua data de nascimento (dd/mm/aaaa): ")
+
+# Chamar a função para imprimir a data com o mês por extenso
+imprimir_data_extenso(data_nascimento)
