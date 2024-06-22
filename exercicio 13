@@ -1,0 +1,44 @@
+frase = input('digite uma frase: ')
+
+contador = 0
+
+while True : 
+
+    if '' in frase :
+        contador=0
+        contador=contador + 1
+
+    print('existem',contador,'espaços em branco')
+
+    if 'a' in frase :
+        contador=0
+        contador+=1
+
+        print('a letra A apareceu',contador,'vezes')
+
+    if 'e' in frase :
+        contador=0
+        contador+=1
+
+        print('a letra E apareceu',contador,'vezes')
+
+    if 'i' in frase :
+        contador=0
+        contador+=1
+
+        print('a letra I apareceu',contador,'vezes')
+
+    if 'o' in frase :
+        contador=0
+        contador+=1
+
+        print('a letra O apareceu',contador,'vezes')
+
+    if 'u' in frase :
+        contador=0
+        contador+=1
+
+        print('a letra U apareceu',contador,'vezes')
+    
+    else:
+        break
