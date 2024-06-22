@@ -1,0 +1,21 @@
+def anagramas(str1, str2):
+   
+    str1 = str1.replace(" ", "").lower()
+    str2 = str2.replace(" ", "").lower()
+    
+    
+    return sorted(str1) == sorted(str2)
+
+
+str1 = input("Digite a primeira string: ")
+
+str2 = input("Digite a segunda string: ")
+
+
+if anagramas(str1, str2):
+
+    print(f'"{str1}" é um anagrama de "{str2}"')
+
+else:
+    
+    print(f'"{str1}" não é um anagrama de "{str2}"')
