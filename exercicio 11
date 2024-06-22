@@ -1,0 +1,30 @@
+frase1 = input('digite a primeira frase :')
+
+frase2 = input('digite a segunda frase : ')
+
+tam = (len(frase1))
+
+tam2 = (len(frase2))
+
+print ('O tamanho da frase:',frase1,'é :',(len(frase1)),'caracteres')
+
+print ('O tamanho da frase:',frase2,'é :',(len(frase2)),'caracteres')
+
+if tam == tam2 :
+
+    print ('Os tamanhos sao iguais ')
+
+elif tam != tam2: 
+
+    print('Os tamanhos sao diferentes')
+
+else:
+    print('acabou')
+
+if frase1 in frase2:
+    print ('as frases sao iguais ')
+
+elif frase1 not in frase2:
+    print('as frases sao diferentes')
+else:
+    print('acabou')
