@@ -1,0 +1,7 @@
+def invert(s):
+    return ''.join(reversed(s))
+
+
+s = str(input('digite a palavra'))
+
+print(invert(s))  
