@@ -1,0 +1,21 @@
+import unidecode
+import re
+
+def normalizar_texto(texto):
+ 
+    texto = unidecode.unidecode(texto)
+    
+
+    texto = texto.lower()
+    
+
+    texto = re.sub(r'[^a-z0-9\s]', '', texto)
+    
+    return texto
+
+
+texto_original = "Olá, Mundo! Este é um texto de Exemplo. Números: 123456."
+texto_normalizado = normalizar_texto(texto_original)
+
+print("Texto original:", texto_original)
+print("Texto normalizado:", texto_normalizado)
