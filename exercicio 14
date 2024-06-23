@@ -1,0 +1,21 @@
+def tel(numero):
+    
+    numero = numero.replace('-', '')
+
+    if len(numero) == 7:
+      
+        numero = '3' + numero
+
+
+    numero_ = numero[:4] + '-' + numero[4:]
+
+    return numero_
+
+
+numero_tel = input("Digite o número de telefone (com ou sem traço): ")
+
+
+numero_corrigido = tel(numero_tel)
+
+
+print("Número de telefone corrigido:", numero_corrigido)
