@@ -1,0 +1,13 @@
+texto = input('digite seu texto:')
+
+censurada = input('digite as palavras censuradas porvirgula :').split()
+
+for palavra in censurada :
+
+    sub = '*' * len(palavra)
+    censurada = '*' * len(palavra)
+
+
+print (texto)
+
+print(censurada)
