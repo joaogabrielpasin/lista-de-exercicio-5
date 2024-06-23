@@ -1,0 +1,12 @@
+l = []
+while True :
+    l.append(int(input('digite a  nota :')))
+    c = str(input('deseja continuar:[S/N]'))
+    c2=c.upper()
+    if c2 in 'N':
+        break
+soma = sum(l)   
+l2 =(len(l))        
+media = soma / l2
+print(l)
+print(media)
