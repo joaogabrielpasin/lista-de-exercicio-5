@@ -1,0 +1,18 @@
+def binario_para_decimal(numero_binario):
+    decimal = 0
+    # Converte o número binário em uma string reversa para facilitar o processamento
+    numero_binario = numero_binario[::-1]
+    
+    # Percorre cada dígito do número binário
+    for i in range(len(numero_binario)):
+        # Converte cada dígito para inteiro
+        digito = int(numero_binario[i])
+        # Multiplica o dígito pelo valor correspondente na potência de 2
+        decimal += digito * (2 ** i)
+    
+    return decimal
+
+# Exemplo de uso da função
+numero_binario = "10101"
+decimal = binario_para_decimal(numero_binario)
+print(f"O número binário {numero_binario} em decimal é: {decimal}")
