@@ -1,0 +1,36 @@
+
+def verificar_equilibrio_parenteses(string):
+
+    correspondencia = {')': '(', ']': '[', '}': '{'}
+ 
+    pilha = []
+
+    for char in string:
+        if char in correspondencia.values():
+       
+            pilha.append(char)
+        elif char in correspondencia.keys():
+            
+            if pilha and pilha[-1] == correspondencia[char]:
+                pilha.pop()  # Desempilha o caractere de abertura correspondente
+            else:
+                return False  # Se não houver correspondência, está desequilibrado
+
+ 
+    return len(pilha) == 0
+
+
+strings_para_testar = [
+    "([]){}",
+    "([)]",
+    "{[()]}",
+    "{[(])}",
+    "((()))",
+    "[{()}]",
+    "(()",
+    "())",
+    "{[}",
+]
+
+for s in strings_para_testar:
+    print(f"{s}: {verificar_equilibrio_parenteses(s)}")
