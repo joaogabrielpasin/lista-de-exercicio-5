@@ -1,0 +1,44 @@
+opção= str(input('qual opção deseja?:  (1) somar   (2) subtrair    (3) multiplicar    (4) dividir    (5) limpar memoria (6) sair do programa :'))
+opcao1 = opção.split()
+memoria = 0
+while True :
+
+    if opcao1[0] == 1 :
+        n1 = int(input('primeiro numero que deseja somar'))
+        n2 = int(input('segundo numero que deseja somar'))
+        soma = n1 + n2 
+        memoria = memoria + 1
+        print(soma)
+        print('sua memora é ',memoria )
+
+    elif opcao1[1] == 2 :
+        n1 = int(input('primeiro numero que deseja subtrair'))
+        n2 = int(input('segundo numero que deseja subtrair'))
+        soma = n1 - n2 
+        memoria = memoria + 2
+        print(soma)
+        print('sua memora é ',memoria )
+    elif opcao1[2] == 3 :
+        n1 = int(input('primeiro numero que deseja subtrair'))
+        n2 = int(input('segundo numero que deseja subtrair'))
+        soma = n1 * n2 
+        memoria = memoria + 3
+        print(soma)
+        print('sua memora é ',memoria )
+    elif opcao1[3] == 4 :
+        n1 = int(input('primeiro numero que deseja subtrair'))
+        n2 = int(input('segundo numero que deseja subtrair'))
+        soma = n1 % n2 
+        memoria = memoria + 2
+        print(soma)
+        print('sua memora é ',memoria )
+    elif opcao1[4] == 5 :
+      memoria = 0
+      print('sua memora é ',memoria )
+    
+    elif opcao1[5]==5:
+        print('voce saiu do programa ')
+
+    else:
+        break
+    
