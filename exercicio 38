@@ -1,0 +1,20 @@
+import math
+
+def distancia_euclidiana(ponto1, ponto2):
+    # Verifica se os dois pontos têm a mesma dimensão
+    if len(ponto1) != len(ponto2):
+        raise ValueError("Os pontos devem ter a mesma dimensão")
+
+    # Calcula a soma dos quadrados das diferenças de cada dimensão
+    soma_quadrados = sum((q - p) ** 2 for p, q in zip(ponto1, ponto2))
+    
+    # Calcula a raiz quadrada da soma dos quadrados
+    distancia = math.sqrt(soma_quadrados)
+    
+    return distancia
+
+# Exemplo de uso da função
+ponto1 = (1, 2, 3)
+ponto2 = (4, 5, 6)
+distancia = distancia_euclidiana(ponto1, ponto2)
+print(f"A distância euclidiana entre {ponto1} e {ponto2} é: {distancia:.2f}")
