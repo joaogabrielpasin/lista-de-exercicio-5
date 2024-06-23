@@ -1,0 +1,5 @@
+vog = str(input('digite sua frase:'))
+
+vog1 = vog.lower()
+
+print('a letra A apareceu {} vezes, a letra E apareceu {} vezes , a letra I apareceu {} vezes , a letra U apareceu {} vezes e a lera O apareceu {} vezes'.format(vog1.count('a'),vog1.count('e'),vog1.count('i'),vog1.count('o'),vog1.count('u')))
