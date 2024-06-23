@@ -1,0 +1,11 @@
+texto = str(input('digite o seu email : '))
+
+#proc =texto.find('@gmail.com')
+
+if '@gmail.com' in texto :
+    print ('Seu email {} é valido'.format(texto))
+
+else:
+    print('seu email {} é invalido'.format(texto))
+
+
