@@ -1,0 +1,26 @@
+
+
+import re
+from collections import defaultdict
+
+def contar_frequencia_palavras(texto):
+    # Remove pontuação e converte o texto para minúsculas
+    texto_limpo = re.sub(r'[^\w\s]', '', texto).lower()
+    
+    # Divide o texto em palavras
+    palavras = texto_limpo.split()
+    
+    # Cria um dicionário para contar a frequência das palavras
+    frequencia_palavras = defaultdict(int)
+    
+    # Conta a frequência de cada palavra
+    for palavra in palavras:
+        frequencia_palavras[palavra] += 1
+    
+    return dict(frequencia_palavras)
+
+# Exemplo de uso
+texto = "Olá, mundo! Este é um teste. Este teste é apenas um exemplo."
+frequencia = contar_frequencia_palavras(texto)
+
+print(frequencia)
