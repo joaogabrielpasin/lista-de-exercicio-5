@@ -1,0 +1,20 @@
+def expandir_abreviacoes(texto, dicionario_abreviacoes):
+    for abreviacao, completa in dicionario_abreviacoes.items():
+        texto = texto.replace(abreviacao, completa)
+    return texto
+
+# Dicionário de abreviações
+dicionario_abreviacoes = {
+    "prof.": "professor",
+    "Dr.": "Doutor",
+    "Sra.": "Senhora",
+    "Sr.": "Senhor",
+    "etc.": "et cetera",
+    "vc": "você"}
+
+
+texto = input("Digite o texto com abreviações: ")
+
+texto_expandido = expandir_abreviacoes(texto, dicionario_abreviacoes)
+
+print("Texto sem abreviações:", texto_expandido)
