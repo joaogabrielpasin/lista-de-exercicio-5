@@ -1,0 +1,6 @@
+pla = str(input('digite uma frase'))
+pal = pla.split()
+
+print(pla)
+
+print ('essa frase tem {} palavras'.format(len(pal)))
