@@ -1,0 +1,30 @@
+def comprimir_string(s):
+    # Verifica se a string está vazia
+    if not s:
+        return ""
+    
+    # Inicializa variáveis
+    resultado = []
+    contador = 1
+    
+    # Percorre a string
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            contador += 1
+        else:
+            # Adiciona o caractere e sua contagem ao resultado
+            resultado.append(s[i - 1] + str(contador))
+            contador = 1
+    
+    # Adiciona o último caractere e sua contagem
+    resultado.append(s[-1] + str(contador))
+    
+    # Converte a lista para string
+    return ''.join(resultado)
+
+# Exemplo de uso
+texto = "aaabbc"
+texto_comprimido = comprimir_string(texto)
+
+print("Texto original:", texto)
+print("Texto comprimido:", texto_comprimido)
