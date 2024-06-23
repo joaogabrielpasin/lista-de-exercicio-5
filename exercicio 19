@@ -1,0 +1,5 @@
+texto = str(input('digite o texto: ')).split()
+
+print (texto)
+
+print (texto[ : :-1])
