@@ -1,0 +1,30 @@
+import math
+
+def calcular_combinacoes(N, M):
+    # Calcula N!
+    fatorial_N = math.factorial(N)
+    # Calcula M!
+    fatorial_M = math.factorial(M)
+    # Calcula (N - M)!
+    fatorial_NM = math.factorial(N - M)
+    
+    # Calcula o número de combinações
+    combinacoes = fatorial_N // (fatorial_M * fatorial_NM)
+    
+    return combinacoes
+
+def main():
+    # Entrada dos valores de N e M
+    N = int(input("Digite o número total de alunos (N): "))
+    M = int(input("Digite o número de alunos no primeiro grupo (M): "))
+    
+    # Verifica se M é válido (0 <= M <= N)
+    if 0 <= M <= N:
+        # Calcula o número de combinações
+        num_combinacoes = calcular_combinacoes(N, M)
+        print(f"Número de combinações possíveis: {num_combinacoes}")
+    else:
+        print("Erro: M deve ser um valor entre 0 e N.")
+
+if __name__ == "__main__":
+    main()
