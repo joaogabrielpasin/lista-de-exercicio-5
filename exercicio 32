@@ -1,0 +1,8 @@
+n = int(input('digite o numero que deseja verificar se é primo:'))
+
+if n %2 == 0 :
+    print(n)
+    print('ele nao é primo ')
+    
+else :
+    print('ele é primo')
