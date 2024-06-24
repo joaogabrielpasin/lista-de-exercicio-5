@@ -1,0 +1,41 @@
+def mergesort(lista):
+    # Função recursiva para dividir a lista e ordenar
+    if len(lista) > 1:
+        meio = len(lista) // 2
+        metade_esquerda = lista[:meio]
+        metade_direita = lista[meio:]
+
+        # Chamadas recursivas para ordenar as duas metades
+        mergesort(metade_esquerda)
+        mergesort(metade_direita)
+
+        # Inicializa os índices para percorrer as duas metades e a lista final
+        i = j = k = 0
+
+        # Combina as duas metades ordenadas na lista original
+        while i < len(metade_esquerda) and j < len(metade_direita):
+            if metade_esquerda[i] < metade_direita[j]:
+                lista[k] = metade_esquerda[i]
+                i += 1
+            else:
+                lista[k] = metade_direita[j]
+                j += 1
+            k += 1
+
+        # Verifica se ainda há elementos restantes nas metades
+        while i < len(metade_esquerda):
+            lista[k] = metade_esquerda[i]
+            i += 1
+            k += 1
+
+        while j < len(metade_direita):
+            lista[k] = metade_direita[j]
+            j += 1
+            k += 1
+
+# Exemplo de uso da função
+lista = [64, 34, 25, 12, 22, 11, 90]
+print("Lista original:", lista)
+
+mergesort(lista)
+print("Lista ordenada:", lista)
