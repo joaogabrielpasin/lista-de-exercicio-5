@@ -1,0 +1,29 @@
+def eh_primo(num):
+    """ Função auxiliar para verificar se um número é primo """
+    if num <= 1:
+        return False
+    if num <= 3:
+        return True
+    if num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+def primeiros_primos(n):
+    """ Função para gerar uma lista dos primeiros n números primos """
+    primos = []
+    num = 2  
+    while len(primos) < n:
+        if eh_primo(num):
+            primos.append(num)
+        num += 1
+    return primos
+
+
+n = int(input('digite or termos que deseja:'))
+lista_primos = primeiros_primos(n)
+print(f"Os primeiros {n} números primos são:", lista_primos)
