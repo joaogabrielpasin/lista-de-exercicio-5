@@ -1,0 +1,7 @@
+frase1 = str(input('digite a frase 1: '))
+frase2 = str(input('digite a frase 2: '))
+
+if frase2 in frase1 :
+    print('é uma subsequencia ')
+else :
+    print('nao é uma subsequencia')
