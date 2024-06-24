@@ -1,0 +1,31 @@
+def combinar_strings_intercaladas(str1, str2):
+    
+    resultado = []
+    len_str1, len_str2 = len(str1), len(str2)
+    min_len = min(len_str1, len_str2)
+
+    # Intercala os caracteres das duas strings
+    for i in range(min_len):
+        resultado.append(str1[i])
+        resultado.append(str2[i])
+    
+    # Anexa o restante da string mais longa
+    if len_str1 > len_str2:
+        resultado.append(str1[min_len:])
+    else:
+        resultado.append(str2[min_len:])
+    
+    return ''.join(resultado)
+
+# Exemplo de uso da função
+str1 = "abc"
+str2 = "12345"
+print(combinar_strings_intercaladas(str1, str2))  # Deve retornar 'a1b2c345'
+
+str1 = "hello"
+str2 = "world"
+print(combinar_strings_intercaladas(str1, str2))  # Deve retornar 'hweolrllod'
+
+str1 = "short"
+str2 = "muchlonger"
+print(combinar_strings_intercaladas(str1, str2))  # Deve retornar 'smuhcohrtlonger'
