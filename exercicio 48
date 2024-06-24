@@ -1,0 +1,13 @@
+
+s = str(input('digite a palavra')
+
+
+alfabeto = set('abcdefghijklmnopqrstuvwxyz')
+
+
+letras_presentes = set(s.lower())
+
+
+pangrama = alfabeto.issubset(letras_presentes)
+
+print(f"A string '{s}' é um pangrama: {pangrama}")
