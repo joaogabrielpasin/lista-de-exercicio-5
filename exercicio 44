@@ -1,0 +1,8 @@
+base = int(input('digite a bsae :'))
+expoente = int(input('digite o expoente:'))
+b= 1
+res=1
+while b<= expoente:
+    res*=base
+    b+=1
+print(res)
