@@ -1,0 +1,31 @@
+lista =[]
+
+while True :
+    n = int(input('digite um numero da primeira lista'))
+    if n not in lista:
+        lista.append(n)
+    r = str(input('deseja continuar?[S/N]'))
+    if r in 'Nn':
+        break
+print (lista)
+lista2 =[]
+
+while True :
+    n = int(input('digite um numero da segunda lista'))
+    if n not in lista2:
+        lista2.append(n)
+    r = str(input('deseja continuar?[S/N]'))
+    c =set(lista2)
+    if r in 'Nn':
+        break
+print (lista2)
+
+comun=[]
+
+for elemento in lista :
+    if elemento in c:
+        comun.append(elemento)
+        c.remove(elemento)
+else :
+    print('cabo')
+print (comun)
