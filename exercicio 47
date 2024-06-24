@@ -1,0 +1,26 @@
+
+
+def determinante_matriz_2x2(matriz):
+    --
+    if len(matriz) != 2 or len(matriz[0]) != 2 or len(matriz[1]) != 2:
+        raise ValueError("A matriz deve ser 2x2")
+
+    a, b = matriz[0]
+    c, d = matriz[1]
+
+    return a * d - b * c
+
+-
+matriz = [
+    [1, 2],
+    [3, 4]
+]
+
+print(f"O determinante da matriz é: {determinante_matriz_2x2(matriz)}")  # Deve retornar -2
+
+matriz = [
+    [2, 3],
+    [1, 4]
+]
+
+print(f"O determinante da matriz é: {determinante_matriz_2x2(matriz)}")  # Deve retornar 5
