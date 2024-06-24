@@ -1,0 +1,23 @@
+
+intervalos_str = "1-3,5,7-9"
+
+numeros_e = []
+
+intervalos = intervalos_str.split(',')
+
+for intervalo in intervalos:
+ 
+    if '-' in intervalo:
+     
+        inicio, fim = intervalo.split('-')
+        # Converter para inteiros
+        inicio = int(inicio)
+        fim = int(fim)
+      
+        numeros_e.extend(range(inicio, fim + 1))
+    else:
+       
+        numeros_e.append(int(intervalo))
+
+
+print(numeros_e)
