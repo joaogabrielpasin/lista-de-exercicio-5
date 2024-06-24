@@ -1,0 +1,53 @@
+def eh_quadrado_magico(matriz):
+    """
+    Função para verificar se uma matriz é um quadrado mágico.
+    """
+    n = len(matriz)
+    
+    # Verifica se a matriz é quadrada
+    for linha in matriz:
+        if len(linha) != n:
+            return False
+    
+    # Calcula a soma da primeira linha para comparação
+    soma_magica = sum(matriz[0])
+
+    # Verifica a soma de todas as linhas
+    for linha in matriz:
+        if sum(linha) != soma_magica:
+            return False
+
+    # Verifica a soma de todas as colunas
+    for col in range(n):
+        soma_coluna = sum(matriz[row][col] for row in range(n))
+        if soma_coluna != soma_magica:
+            return False
+
+    # Verifica a soma da diagonal principal
+    soma_diagonal_principal = sum(matriz[i][i] for i in range(n))
+    if soma_diagonal_principal != soma_magica:
+        return False
+
+    # Verifica a soma da diagonal secundária
+    soma_diagonal_secundaria = sum(matriz[i][n - i - 1] for i in range(n))
+    if soma_diagonal_secundaria != soma_magica:
+        return False
+
+    # Se todas as somas são iguais, é um quadrado mágico
+    return True
+
+# Exemplo de uso da função
+matriz_magica = [
+    [2, 7, 6],
+    [9, 5, 1],
+    [4, 3, 8]
+]
+
+matriz_nao_magica = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print("A matriz é um quadrado mágico:", eh_quadrado_magico(matriz_magica))  # Deve retornar True
+print("A matriz é um quadrado mágico:", eh_quadrado_magico(matriz_nao_magica))  # Deve retornar False
